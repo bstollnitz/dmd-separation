@@ -1,0 +1,5 @@
+__pycache__
+.ropeproject
+.vscode/settings.json
+data
+plots
