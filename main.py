@@ -130,11 +130,19 @@ def _split_video_1(original_video: np.ndarray, omega: np.ndarray,
     foreground = original_video - np.abs(background)
 
     # We can't display negative pixels, so we clamp the foreground to zero.
-    # In the location where the pixels are negative, we darken the background
-    # by the negative amount.
+    # We do this by subtracting the negative residual (or adding the positive 
+    # residual) to the negative pixels in the foreground.
+    # The resulting foreground is black on every pixel that was darker than the
+    # background, and it's the actual foreground on every pixel that was 
+    # lighter than the background.
     residual = np.minimum(foreground, 0)
-    background = residual + np.abs(background)
     foreground = foreground - residual
+
+    # We add the (negative) residuals back to the background. This darkens
+    # every background pixel where the original image was darker than the 
+    # background, essentially transfering the darker parts of the foreground 
+    # onto the background.
+    background = residual + np.abs(background)
 
     # The resulting foreground video has black pixels except where the original
     # foreground is lighter than the original background.
