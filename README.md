@@ -6,7 +6,9 @@
 ## Description
 
 <p float="left">
-  <video src="https://bea-portfolio.s3-us-west-2.amazonaws.com/dmd-separation/monkey-giraffe.mp4" width="800" controls/>
+  <a href="https://bea-portfolio.s3-us-west-2.amazonaws.com/dmd-separation/monkey-giraffe.mp4">
+    <img src="readme_files/video.mp4" width="800" controls/>
+  </a>
 </p>
 
 <p float="left">
