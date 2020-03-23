@@ -1,4 +1,4 @@
-# DMD separation
+# Separation of background and foreground using DMD
 
 *Technologies:* Python, NumPy, Plotly, OpenCV. <br>
 *Topics:* dynamic mode decomposition (DMD), video processing. <br>
