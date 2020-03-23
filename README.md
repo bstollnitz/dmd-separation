@@ -12,8 +12,8 @@
 </p>
 
 <p float="left">
-  <img src="readme_files/monkey-giraffe_2_background.png?raw=true" width="400" />
-  <img src="readme_files/monkey-giraffe_2_foreground.png?raw=true" width="400" />
+  <img src="https://github.com/bstollnitz/dmd-separation/blob/master/readme_files/monkey-giraffe_2_background.png?raw=true" width="400" />
+  <img src="https://github.com/bstollnitz/dmd-separation/blob/master/readme_files/monkey-giraffe_2_foreground.png?raw=true" width="400" />
 </p>
 
 In this project, I explore two techniques for separating a moving foreground from a stationary background in videos. Both techniques rely on Dynamic Mode Decomposition (DMD), following somewhat different steps to arrive at the foreground and background pixel values. I use three videos of animal puppets exploring the Seattle cityscape in this analysis. No animals were harmed in this research.
@@ -31,8 +31,15 @@ of my masters in Applied Mathematics.
 
 To run this project:
 
+(Windows)
 ```sh
-conda env create -f environment.yml
+conda env create -f environment_win.yml
 conda activate dmd-separation
 python main.py
 ```
+
+(Mac)
+```sh
+conda env create -f environment_mac.yml
+conda activate dmd-separation
+python main.py
